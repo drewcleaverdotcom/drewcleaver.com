@@ -1,10 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html, body {
     font-family: 'Roboto Mono', monospace;
     background-color: #000000; /* black background */
     color: #ffe717; /* Canary color for text */
+}
+
+/* Custom Scrollbar Styling */
+
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 231, 23, 0.6); /* Canary color thumb */
+  border-radius: 100vw; /* fully rounded ends */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 231, 23, 0.75);
+}
+
+/* Firefox Scrollbar Styling */
+html {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgba(255, 231, 23, 0.6) transparent; /* Canary color thumb */
 }
