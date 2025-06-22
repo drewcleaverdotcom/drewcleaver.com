@@ -15,6 +15,12 @@ export default function Footer() {
           <Link href="/contact" className="hover:underline">
             Contact
           </Link>
+          <Link href="/privacy-policy" className="hover:underline">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-of-service" className="hover:underline">
+            Terms of Service
+          </Link>
         </nav>
         <div className="flex gap-6 text-2xl">
           <a
