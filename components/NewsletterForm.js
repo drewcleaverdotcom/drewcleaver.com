@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
@@ -39,10 +40,10 @@ export default function NewsletterForm() {
       />
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-600 text-white rounded"
+        className="px-4 py-2 bg-[#ffe717] text-black rounded flex items-center justify-center min-w-[6rem]"
         disabled={status === 'loading'}
       >
-        Sign Up
+        {status === 'loading' ? <LoadingSpinner className="h-5 w-5" /> : 'Sign Up'}
       </button>
       {status === 'success' && (
         <p className="text-green-500">Thanks for signing up!</p>
