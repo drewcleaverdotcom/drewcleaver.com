@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-black text-[#ffe717]">
+    <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
       <Head>
         <title>Drew Cleaver Consulting | Political Strategy, Business Automation, Spiritual Insight</title>
         <meta

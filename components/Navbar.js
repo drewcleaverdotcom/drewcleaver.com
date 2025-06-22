@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-black text-[#ffe717] border-b border-[#ffe717]">
+    <nav className="bg-[var(--bg-color)] text-[var(--text-color)] border-b border-[var(--border-color)]">
       <div className="mx-auto flex max-w-4xl items-center justify-between p-4">
         <Link href="/" className="text-xl font-bold">
           DrewCleaver.com
@@ -42,6 +43,7 @@ export default function Navbar() {
           <Link href="/contact" className="hover:underline">
             Contact
           </Link>
+          <ThemeToggle />
         </div>
       </div>
       {isOpen && (
@@ -55,6 +57,7 @@ export default function Navbar() {
           <Link href="/contact" className="hover:underline" onClick={toggleMenu}>
             Contact
           </Link>
+          <ThemeToggle />
         </div>
       )}
     </nav>
