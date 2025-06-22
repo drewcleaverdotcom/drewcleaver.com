@@ -6,13 +6,13 @@
 
 html, body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #000000; /* black background */
+    background-color: #000000; /* Black background */
     color: #ffe717; /* Canary color for text */
 }
 
-/* Custom Scrollbar Styling */
+/* Scrollbar styling */
 
-/* Webkit-based browsers (Chrome, Safari) */
+/* Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -23,16 +23,16 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 231, 23, 0.6); /* Canary color thumb */
-  border-radius: 100vw; /* fully rounded ends */
+  background-color: rgba(255, 231, 23, 0.4); /* Canary semi-transparent thumb */
+  border-radius: 100vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 231, 23, 0.75);
+  background-color: rgba(255, 231, 23, 0.6); /* Slightly brighter hover */
 }
 
-/* Firefox Scrollbar Styling */
+/* Firefox scrollbar styling */
 html {
-  scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: rgba(255, 231, 23, 0.6) transparent; /* Canary color thumb */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 231, 23, 0.4) transparent;
 }
