@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Head from 'next/head';
+import NewsletterForm from '../components/NewsletterForm';
 
 export default function Home() {
   return (
@@ -25,10 +26,14 @@ export default function Home() {
             height={300}
             className="w-40 sm:w-56 md:w-72"
           />
-          <h1 id="main-title" className="mt-4 text-3xl sm:text-4xl md:text-5xl font-normal text-[#ffe717] text-center">
+          <h1
+            id="main-title"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-normal text-[#ffe717] text-center"
+          >
             Welcome to DrewCleaver.com
           </h1>
         </header>
+        <NewsletterForm />
       </main>
     </>
   );
