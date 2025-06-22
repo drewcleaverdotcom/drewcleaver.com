@@ -1,12 +1,12 @@
 # drewcleaver.com
 
-This repository contains the initial scaffolding for the drewcleaver.com website. It provides a minimal Express server that serves a simple greeting. Use this as a starting point for future development.
+This repository contains the scaffolding for **drewcleaver.com** built with [Next.js](https://nextjs.org/) and styled using [Tailwind CSS](https://tailwindcss.com/).
 
 ## Running locally
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-The application will be available on `http://localhost:3000`.
+The application will be available at `http://localhost:3000`.
