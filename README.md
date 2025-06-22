@@ -22,3 +22,14 @@ KLAVIYO_LIST_ID=your_list_id
 ```
 
 Restart the development server after adding environment variables.
+
+## Google Analytics
+
+This project supports Google Analytics 4 tracking using `next/script`.
+Add your measurement ID to `.env.local`:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+Analytics will only load in the browser when this value is present.
