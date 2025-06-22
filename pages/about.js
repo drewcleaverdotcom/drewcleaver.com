@@ -1,8 +1,10 @@
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-[#ffe717]">
+      <SEO title="About - Drew Cleaver Consulting" />
       <main className="flex flex-grow flex-col items-center justify-center">
         <h1 className="text-4xl">About Page</h1>
       </main>

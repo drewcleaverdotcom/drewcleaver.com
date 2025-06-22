@@ -1,22 +1,12 @@
 import Image from 'next/image';
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import NewsletterForm from '../components/NewsletterForm';
 import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-[#ffe717]">
-      <Head>
-        <title>Drew Cleaver Consulting | Political Strategy, Business Automation, Spiritual Insight</title>
-        <meta
-          name="description"
-          content="Drew Cleaver Consulting offers expert political strategy, business automation, and spiritual insight to help organizations thrive."
-        />
-        <meta
-          name="keywords"
-          content="Drew Cleaver Consulting, political strategy, business automation, spiritual insight"
-        />
-      </Head>
+      <SEO />
 
       <main className="flex flex-col flex-grow items-center justify-center gap-4 sm:gap-6 p-4 sm:p-8">
         <header aria-labelledby="main-title" className="text-center">
