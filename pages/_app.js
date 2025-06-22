@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
+import { ThemeProvider } from '../components/ThemeContext';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
@@ -19,9 +20,10 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <Component {...pageProps} />
+
       {gtag.GA_MEASUREMENT_ID && (
         <>
           <Script
@@ -40,6 +42,6 @@ export default function App({ Component, pageProps }) {
           </Script>
         </>
       )}
-    </>
+    </ThemeProvider>
   );
 }

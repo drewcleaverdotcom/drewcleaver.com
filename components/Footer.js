@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import SocialLinks from './SocialLinks';
+import { FaLinkedin, FaInstagram, FaGithub, FaLink } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-[#ffe717] py-6 mt-auto">
+    <footer className="bg-[var(--bg-color)] text-[var(--text-color)] py-6 mt-auto">
       <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between gap-4">
         <nav className="flex gap-6">
           <Link href="/" className="hover:underline">
@@ -22,7 +23,37 @@ export default function Footer() {
             Terms of Service
           </Link>
         </nav>
-        <SocialLinks className="text-2xl" />
+
+        <div className="flex gap-6 text-2xl">
+          <a
+            href="https://www.linkedin.com/in/drewcleaver/"
+            aria-label="LinkedIn"
+            className="hover:text-[var(--hover-color)]"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/drewcleaverdotcom"
+            aria-label="GitHub"
+            className="hover:text-[var(--hover-color)]"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/drewcleaverdotcom/"
+            aria-label="Instagram"
+            className="hover:text-[var(--hover-color)]"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://linktr.ee/drewcleaver"
+            aria-label="Linktree"
+            className="hover:text-[var(--hover-color)]"
+          >
+            <FaLink />
+          </a>
+        </div>
       </div>
     </footer>
   );
