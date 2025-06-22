@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import SocialLinks from './SocialLinks';
 
 export default function Footer() {
   return (
@@ -16,29 +16,7 @@ export default function Footer() {
             Contact
           </Link>
         </nav>
-        <div className="flex gap-6 text-2xl">
-          <a
-            href="https://www.linkedin.com/"
-            aria-label="LinkedIn"
-            className="hover:text-[#ffe717]"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com/"
-            aria-label="Twitter"
-            className="hover:text-[#ffe717]"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            aria-label="Instagram"
-            className="hover:text-[#ffe717]"
-          >
-            <FaInstagram />
-          </a>
-        </div>
+        <SocialLinks className="text-2xl" />
       </div>
     </footer>
   );
