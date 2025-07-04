@@ -7,7 +7,7 @@ import SocialLinks from '../components/SocialLinks';
 
 export default function Home() {
   const buttonClass =
-    'w-full text-center border-2 rounded py-2 transition-colors duration-200 border-[#FFE717] bg-black text-[#FFE717] hover:border-[#00CC88] hover:text-[#00CC88]';
+    'w-full text-center border-2 rounded py-1.5 transition-colors duration-200 border-[#FFE717] bg-black text-[#FFE717] hover:border-[#00CC88] hover:text-[#00CC88]';
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
       <SEO
@@ -16,17 +16,17 @@ export default function Home() {
         keywords="Drew Cleaver Consulting, political strategy, business automation, spiritual insight"
       />
 
-      <main className="flex flex-col flex-grow items-center justify-center gap-6 p-4 sm:p-8 pb-16 sm:pb-24">
+      <main className="flex flex-col flex-grow items-center justify-center gap-4 p-4 sm:p-6 pb-8 sm:pb-12">
         <header aria-labelledby="main-title" className="text-center">
           <h1
             id="main-title"
-            className="text-2xl sm:text-3xl md:text-4xl font-normal text-center"
+            className="text-xl sm:text-2xl md:text-3xl font-normal text-center"
           >
             Founder. Strategist. Big Ideas Writer.
           </h1>
         </header>
 
-        <div className="flex w-full max-w-xs sm:max-w-sm flex-col gap-4">
+        <div className="flex w-full max-w-xs sm:max-w-sm flex-col gap-3">
           <Link href="/about" className={buttonClass}>
             About Me
           </Link>
@@ -70,9 +70,9 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="mt-6 w-full max-w-xs sm:max-w-sm">
+        <div className="mt-4 w-full max-w-xs sm:max-w-sm">
           <EmailSignup />
-          <SocialLinks className="mt-4 text-2xl" />
+          <SocialLinks className="mt-3 text-2xl" />
         </div>
       </main>
 
