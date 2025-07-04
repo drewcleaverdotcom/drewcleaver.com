@@ -55,6 +55,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <p className="mt-4 text-sm font-normal">DrewCleaver.com</p>
     </footer>
   );
 }
