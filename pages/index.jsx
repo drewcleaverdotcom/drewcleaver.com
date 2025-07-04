@@ -18,22 +18,15 @@ export default function Home() {
 
       <main className="flex flex-col flex-grow items-center justify-center gap-6 p-4 sm:p-8 pb-16 sm:pb-24">
         <header aria-labelledby="main-title" className="text-center">
-          <Image
-            src="/DrewCconsultingLOGOcanary.png"
-            alt="Drew Cleaver Consulting logo"
-            width={300}
-            height={300}
-            className="w-40 sm:w-56 md:w-72"
-          />
           <h1
             id="main-title"
-            className="mt-4 text-2xl sm:text-3xl md:text-4xl font-normal text-center"
+            className="text-2xl sm:text-3xl md:text-4xl font-normal text-center"
           >
             Founder. Strategist. Big Ideas Writer.
           </h1>
         </header>
 
-        <div className="flex w-full max-w-xs sm:max-w-sm flex-col gap-4 mt-4">
+        <div className="flex w-full max-w-xs sm:max-w-sm flex-col gap-4">
           <Link href="/about" className={buttonClass}>
             About Me
           </Link>
