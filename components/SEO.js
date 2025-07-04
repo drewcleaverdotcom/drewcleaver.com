@@ -1,8 +1,7 @@
 import Head from 'next/head';
 
 const defaultMeta = {
-  title:
-    'Drew Cleaver Consulting | Political Strategy, Business Automation, Spiritual Insight',
+  title: 'Drew Cleaver | Building Big Ideas For the Future',
   description:
     'Drew Cleaver Consulting offers expert political strategy, business automation, and spiritual insight to help organizations thrive.',
   keywords:

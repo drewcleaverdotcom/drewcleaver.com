@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
       <SEO
-        title="Drew Cleaver Consulting | Political Strategy, Business Automation, Spiritual Insight"
+        title="Drew Cleaver | Building Big Ideas For the Future"
         description="Drew Cleaver Consulting offers expert political strategy, business automation, and spiritual insight to help organizations thrive."
         keywords="Drew Cleaver Consulting, political strategy, business automation, spiritual insight"
       />
