@@ -35,11 +35,16 @@ export default function KitDownloadSignup() {
   return (
     <div className="flex flex-col items-center gap-4">
       <div ref={containerRef} className="w-full" />
-      {submitted && (
-        <a href="/DrewCleaver-resume.pdf" download className={buttonClass}>
-          Download Résumé
-        </a>
-      )}
+        {submitted && (
+          <a
+            href="/Cleaver-Drew-Resume-ATX-Public-2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
+          >
+            Download Résumé
+          </a>
+        )}
     </div>
   );
 }
