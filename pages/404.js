@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 export default function Custom404() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-[#ffe717]">
+      <SEO title="404 - Drew Cleaver | Building Big Ideas For the Future" />
       <main className="flex flex-grow flex-col items-center justify-center text-center p-4 space-y-6">
         <h1 className="text-8xl font-bold">404</h1>
         <p className="text-2xl max-w-md">Sorry, the page you are looking for does not exist.</p>
