@@ -63,6 +63,9 @@ export default function Home() {
           >
             GitHub
           </a>
+          <a href="https://drewcleaver.kit.com/f122a238d5" className={buttonClass}>
+            Unlock My Best Writing
+          </a>
           <Link href="/resume" className={buttonClass}>
             View Résumé
           </Link>
