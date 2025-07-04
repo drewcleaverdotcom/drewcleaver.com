@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import Navbar from '../components/Navbar';
 import { ThemeProvider } from '../components/ThemeContext';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -23,7 +22,6 @@ export default function App({ Component, pageProps }) {
   return (
     <PlausibleProvider domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}>
       <ThemeProvider>
-        <Navbar />
         <Component {...pageProps} />
 
         {gtag.GA_MEASUREMENT_ID && (
