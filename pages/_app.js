@@ -4,6 +4,7 @@ import { ThemeProvider } from '../components/ThemeContext';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import PlausibleProvider from 'next-plausible';
 import * as gtag from '../lib/gtag';
 
 export default function App({ Component, pageProps }) {
@@ -20,18 +21,19 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ThemeProvider>
-      <Navbar />
-      <Component {...pageProps} />
+    <PlausibleProvider domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}>
+      <ThemeProvider>
+        <Navbar />
+        <Component {...pageProps} />
 
-      {gtag.GA_MEASUREMENT_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="gtag-init" strategy="afterInteractive">
-            {`
+        {gtag.GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
@@ -39,9 +41,10 @@ export default function App({ Component, pageProps }) {
                 page_path: window.location.pathname,
               });
             `}
-          </Script>
-        </>
-      )}
-    </ThemeProvider>
+            </Script>
+          </>
+        )}
+      </ThemeProvider>
+    </PlausibleProvider>
   );
 }
