@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
-import EmailSignupPlaceholder from '../components/EmailSignupPlaceholder';
+import EmailSignup from '../components/EmailSignup';
 
 export default function Home() {
   return (
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
 
         <div className="mt-6 w-full max-w-xs sm:max-w-sm">
-          <EmailSignupPlaceholder />
+          <EmailSignup />
         </div>
       </main>
 
