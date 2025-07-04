@@ -30,7 +30,7 @@ export default function KitDownloadSignup() {
   }, []);
 
   const buttonClass =
-    'w-full text-center border-2 rounded py-2 transition-colors border-[#ffe717] text-[#ffe717] hover:bg-emerald-500 hover:text-black';
+    'w-full text-center border-2 rounded py-2 transition-colors duration-200 border-[#FFE717] bg-black text-[#FFE717] hover:bg-[#FFE717] hover:text-black';
 
   return (
     <div className="flex flex-col items-center gap-4">
