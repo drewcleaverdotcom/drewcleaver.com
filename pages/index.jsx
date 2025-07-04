@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import EmailSignup from '../components/EmailSignup';
 
 export default function Home() {
+  const buttonClass =
+    'w-full text-center border-2 rounded py-2 transition-colors border-[#ffe717] text-[#ffe717] hover:bg-emerald-500 hover:text-black';
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
       <SEO
@@ -31,29 +33,38 @@ export default function Home() {
         </header>
 
         <div className="flex w-full max-w-xs sm:max-w-sm flex-col gap-4 mt-4">
-          <Link
-            href="/about"
-            className="w-full text-center border border-[var(--border-color)] rounded py-2 hover:bg-[var(--hover-color)] hover:text-[var(--bg-color)]"
-          >
-            About
+          <Link href="/about" className={buttonClass}>
+            About Me
           </Link>
-          <Link
-            href="/contact"
-            className="w-full text-center border border-[var(--border-color)] rounded py-2 hover:bg-[var(--hover-color)] hover:text-[var(--bg-color)]"
-          >
-            Contact
+          <Link href="/contact" className={buttonClass}>
+            Contact Me
           </Link>
-          <Link
-            href="/privacy-policy"
-            className="w-full text-center border border-[var(--border-color)] rounded py-2 hover:bg-[var(--hover-color)] hover:text-[var(--bg-color)]"
+          <a
+            href="https://calendly.com/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
           >
-            Privacy Policy
-          </Link>
-          <Link
-            href="/terms-of-service"
-            className="w-full text-center border border-[var(--border-color)] rounded py-2 hover:bg-[var(--hover-color)] hover:text-[var(--bg-color)]"
+            Book Time
+          </a>
+          <a
+            href="https://linkedin.com/in/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
           >
-            Terms of Service
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/drewcleaverdotcom"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
+          >
+            GitHub
+          </a>
+          <Link href="/resume" className={buttonClass}>
+            View Résumé
           </Link>
         </div>
 
