@@ -26,9 +26,9 @@ export default function Home() {
           />
           <h1
             id="main-title"
-            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-normal text-center"
+            className="mt-4 text-2xl sm:text-3xl md:text-4xl font-normal text-center"
           >
-            Welcome to DrewCleaver.com
+            Founder. Strategist. Big Ideas Writer.
           </h1>
         </header>
 
