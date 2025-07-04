@@ -63,8 +63,13 @@ export default function Home() {
           >
             GitHub
           </a>
-          <a href="https://drewcleaver.kit.com/f122a238d5" className={buttonClass}>
-            Unlock My Best Writing
+          <a
+            href="https://drewcleaver.kit.com/products/lifetime-sub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
+          >
+            Unlock Lifetime Writing Access
           </a>
           <Link href="/resume" className={buttonClass}>
             View Résumé
