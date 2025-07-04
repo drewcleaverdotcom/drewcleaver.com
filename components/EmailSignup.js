@@ -6,9 +6,9 @@ export default function EmailSignup() {
   useEffect(() => {
     if (!containerRef.current) return;
     const script = document.createElement('script');
-    script.src = 'https://drewcleaver.kit.com/f122a238d5/index.js';
+    script.src = 'https://drewcleaver.kit.com/094bcad70e/index.js';
     script.async = true;
-    script.setAttribute('data-uid', 'f122a238d5');
+    script.setAttribute('data-uid', '094bcad70e');
     containerRef.current.appendChild(script);
   }, []);
 
