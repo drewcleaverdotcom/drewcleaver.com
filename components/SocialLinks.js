@@ -3,7 +3,7 @@ import { SiLinktree } from 'react-icons/si';
 
 export default function SocialLinks({ className = '' }) {
   return (
-    <div className={`flex gap-6 ${className}`.trim()}>
+    <div className={`flex justify-center gap-6 ${className}`.trim()}>
       <a
         href="https://www.linkedin.com/"
         aria-label="LinkedIn"
