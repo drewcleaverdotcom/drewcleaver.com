@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import SocialLinks from './SocialLinks';
 import { FaLinkedin, FaInstagram, FaGithub, FaLink } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bg-color)] text-[var(--text-color)] py-6 mt-auto">
-      <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between gap-4">
+    <footer className="bg-[var(--bg-color)] text-[var(--text-color)] py-6 mt-auto text-sm">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
         <nav className="flex gap-6">
           <Link href="/" className="hover:underline">
             Home
