@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import EmailSignup from '../components/EmailSignup';
+import SocialLinks from '../components/SocialLinks';
 
 export default function Home() {
   const buttonClass =
@@ -78,6 +79,7 @@ export default function Home() {
 
         <div className="mt-6 w-full max-w-xs sm:max-w-sm">
           <EmailSignup />
+          <SocialLinks className="justify-center mt-4 text-2xl" />
         </div>
       </main>
 
