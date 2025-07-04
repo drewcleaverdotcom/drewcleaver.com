@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import PlausibleProvider from 'next-plausible';
+import Head from 'next/head';
 import * as gtag from '../lib/gtag';
 
 export default function App({ Component, pageProps }) {
@@ -22,6 +23,9 @@ export default function App({ Component, pageProps }) {
   return (
     <PlausibleProvider domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}>
       <ThemeProvider>
+        <Head>
+          <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+        </Head>
         <Component {...pageProps} />
 
         {gtag.GA_MEASUREMENT_ID && (
