@@ -20,7 +20,7 @@ export default function Home() {
         <header aria-labelledby="main-title" className="text-center">
           <h1
             id="main-title"
-            className="text-xl sm:text-2xl md:text-3xl font-normal text-center"
+            className="text-xs sm:text-base md:text-2xl lg:text-3xl font-normal text-center"
           >
             Founder. Strategist. Big Ideas Writer.
           </h1>
