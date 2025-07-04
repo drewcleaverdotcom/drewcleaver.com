@@ -79,6 +79,7 @@ export default function Home() {
 
         <div className="mt-6 w-full max-w-xs sm:max-w-sm">
           <EmailSignup />
+          <SocialLinks className="justify-center mt-4 text-2xl" />
         </div>
 
         <SocialLinks className="w-full text-2xl mt-4" />
