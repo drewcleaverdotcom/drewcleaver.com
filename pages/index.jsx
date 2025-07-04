@@ -16,7 +16,7 @@ export default function Home() {
       />
 
       <main className="flex flex-col flex-grow items-center justify-center gap-6 p-4 sm:p-8">
-        <header aria-labelledby="main-title" className="text-center">
+        <header aria-labelledby="main-title" className="flex flex-col items-center text-center">
           <Image
             src="/DrewCconsultingLOGOcanary.png"
             alt="Drew Cleaver Consulting logo"

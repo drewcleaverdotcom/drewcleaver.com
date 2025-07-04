@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
@@ -9,12 +10,19 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[var(--bg-color)] text-[var(--text-color)] border-b border-[var(--border-color)]">
-      <div className="mx-auto flex max-w-4xl items-center justify-between p-4">
-        <Link href="/" className="text-xl font-bold">
-          DrewCleaver.com
+      <div className="relative mx-auto flex max-w-4xl items-center justify-center p-4">
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center" aria-label="Home">
+          <Image
+            src="/DrewCconsultingLOGOcanary.png"
+            alt="Drew Cleaver Consulting logo"
+            width={120}
+            height={120}
+            className="h-8 w-auto sm:h-10"
+            priority
+          />
         </Link>
         <button
-          className="md:hidden focus:outline-none"
+          className="absolute right-4 top-1/2 -translate-y-1/2 md:hidden focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle navigation"
         >
@@ -33,7 +41,7 @@ export default function Navbar() {
             />
           </svg>
         </button>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 absolute right-4 top-1/2 -translate-y-1/2 items-center">
           <Link href="/" className="hover:underline">
             Home
           </Link>
