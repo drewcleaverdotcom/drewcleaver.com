@@ -38,6 +38,19 @@ html, body {
   color: var(--text-color);
 }
 
+/* Reduce default ConvertKit embed spacing */
+.seva-form.formkit-form,
+.formkit-form,
+.ck_form {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.formkit-powered-by,
+.ck-powered-by {
+  margin-top: 0 !important;
+}
+
 /* Scrollbar styling */
 
 /* Webkit (Chrome, Safari, Edge) */
