@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import EmailSignup from '../components/EmailSignup';
+import SocialLinks from '../components/SocialLinks';
 
 export default function Home() {
   const buttonClass =
@@ -79,6 +80,8 @@ export default function Home() {
         <div className="mt-6 w-full max-w-xs sm:max-w-sm">
           <EmailSignup />
         </div>
+
+        <SocialLinks className="w-full text-2xl mt-4" />
       </main>
 
       <Footer />
