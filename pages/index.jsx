@@ -70,7 +70,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="mt-4 w-full max-w-xs sm:max-w-sm">
+        <div className="mt-2 w-full max-w-xs sm:max-w-sm">
           <EmailSignup />
           <SocialLinks className="mt-3 text-2xl" />
         </div>
