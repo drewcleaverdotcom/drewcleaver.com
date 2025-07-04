@@ -7,6 +7,9 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const linkClass =
+    'border-2 rounded px-2 py-1 transition-colors duration-200 border-[#FFE717] bg-black text-[#FFE717] hover:border-[#00CC88] hover:text-[#00CC88]';
+
   return (
     <nav className="bg-[var(--bg-color)] text-[var(--text-color)] border-b border-[var(--border-color)]">
       <div className="mx-auto flex max-w-4xl items-center justify-between p-4">
@@ -33,29 +36,97 @@ export default function Navbar() {
             />
           </svg>
         </button>
-        <div className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:underline">
-            Home
+        <div className="hidden md:flex space-x-4">
+          <Link href="/about" className={linkClass}>
+            About Me
           </Link>
-          <Link href="/about" className="hover:underline">
-            About
+          <Link href="/contact" className={linkClass}>
+            Contact Me
           </Link>
-          <Link href="/contact" className="hover:underline">
-            Contact
+          <a
+            href="https://calendly.com/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            Book Time
+          </a>
+          <a
+            href="https://linkedin.com/in/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/drewcleaverdotcom"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            GitHub
+          </a>
+          <a
+            href="https://drewcleaver.kit.com/products/lifetime-sub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            Unlock Writing
+          </a>
+          <Link href="/resume" className={linkClass}>
+            Résumé
           </Link>
           <ThemeToggle />
         </div>
       </div>
       {isOpen && (
         <div className="flex flex-col space-y-2 px-4 pb-4 md:hidden">
-          <Link href="/" className="hover:underline" onClick={toggleMenu}>
-            Home
+          <Link href="/about" className={linkClass} onClick={toggleMenu}>
+            About Me
           </Link>
-          <Link href="/about" className="hover:underline" onClick={toggleMenu}>
-            About
+          <Link href="/contact" className={linkClass} onClick={toggleMenu}>
+            Contact Me
           </Link>
-          <Link href="/contact" className="hover:underline" onClick={toggleMenu}>
-            Contact
+          <a
+            href="https://calendly.com/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+            onClick={toggleMenu}
+          >
+            Book Time
+          </a>
+          <a
+            href="https://linkedin.com/in/drewcleaver"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+            onClick={toggleMenu}
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/drewcleaverdotcom"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+            onClick={toggleMenu}
+          >
+            GitHub
+          </a>
+          <a
+            href="https://drewcleaver.kit.com/products/lifetime-sub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+            onClick={toggleMenu}
+          >
+            Unlock Writing
+          </a>
+          <Link href="/resume" className={linkClass} onClick={toggleMenu}>
+            Résumé
           </Link>
           <ThemeToggle />
         </div>
