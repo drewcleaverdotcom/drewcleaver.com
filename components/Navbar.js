@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[var(--bg-color)] text-[var(--text-color)] border-b border-[var(--border-color)]">
       <div className="mx-auto flex max-w-4xl items-center justify-between p-4">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="hidden md:block text-lg font-normal">
           DrewCleaver.com
         </Link>
         <button
