@@ -6,7 +6,7 @@ import EmailSignup from '../components/EmailSignup';
 
 export default function Home() {
   const buttonClass =
-    'w-full text-center border-2 rounded py-2 transition-colors border-[#ffe717] text-[#ffe717] hover:bg-emerald-500 hover:text-black';
+    'w-full text-center border-2 rounded py-2 transition-colors duration-200 border-[#FFE717] bg-black text-[#FFE717] hover:bg-[#FFE717] hover:text-black';
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
       <SEO
