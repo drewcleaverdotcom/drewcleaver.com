@@ -16,7 +16,7 @@ export default function Home() {
         keywords="Drew Cleaver Consulting, political strategy, business automation, spiritual insight"
       />
 
-      <main className="flex flex-col flex-grow items-center justify-center gap-6 p-4 sm:p-8">
+      <main className="flex flex-col flex-grow items-center justify-center gap-6 p-4 sm:p-8 pb-16 sm:pb-24">
         <header aria-labelledby="main-title" className="text-center">
           <Image
             src="/DrewCconsultingLOGOcanary.png"
