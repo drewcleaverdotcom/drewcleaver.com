@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function TermsOfService({ content }) {
   return (
     <div className="flex min-h-screen flex-col bg-black text-[#ffe717]">
-      <SEO title="Terms of Service - Drew Cleaver | Building Big Ideas For the Future" />
+      <SEO title="Terms of Service - Drew Cleaver | Founder. Strategist. Big Ideas Writer." />
       <main className="container mx-auto flex-grow p-4 prose prose-invert">
         <ReactMarkdown>{content}</ReactMarkdown>
       </main>
