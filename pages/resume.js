@@ -5,7 +5,7 @@ import KitDownloadSignup from '../components/KitDownloadSignup';
 export default function Resume() {
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
-      <SEO title="Résumé - Drew Cleaver | Building Big Ideas For the Future" />
+      <SEO title="Résumé - Drew Cleaver | Founder. Strategist. Big Ideas Writer." />
       <main className="flex flex-col flex-grow items-center p-4 text-center gap-6">
         <h1 className="text-4xl">Résumé</h1>
         <p className="max-w-md">

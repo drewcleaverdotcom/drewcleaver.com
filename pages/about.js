@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 export default function About() {
   return (
     <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
-      <SEO title="About - Drew Cleaver | Building Big Ideas For the Future" />
+      <SEO title="About - Drew Cleaver | Founder. Strategist. Big Ideas Writer." />
       <main className="container mx-auto flex-grow p-4 flex flex-col gap-8">
         <h1 className="text-4xl sm:text-5xl font-normal">About Me</h1>
 
