@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drew Cleaver | Enterprise Sales Leader</title>
+    <style>
+        :root {
+            --primary: #0f172a; /* Navy Slate */
+            --accent: #3b82f6; /* Bright Blue */
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+            --bg-light: #ffffff;
+            --bg-offset: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+        body {
+            color: var(--primary);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        /* UTILITIES */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border: 2px solid var(--accent);
+        }
+        .btn:hover { background: transparent; color: var(--accent); }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 10px;
+        }
+        .btn-outline:hover { background: white; color: var(--primary); }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        /* NAV */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        nav .logo { font-weight: 800; font-size: 1.5rem; color: white; text-decoration: none;}
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 500; font-size: 0.9rem;}
+        nav a:hover { color: white; }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 180px 0 100px;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .hero-text .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .stat h3 { font-size: 2rem; color: var(--accent); }
+        .stat p { font-size: 0.9rem; color: var(--text-gray); }
+
+        .hero-image {
+            position: relative;
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+
+        /* METRICS BAR */
+        .metrics-bar {
+            background: var(--accent);
+            color: white;
+            padding: 60px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 5;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .metric-item strong { display: block; font-size: 2.5rem; font-weight: 800; }
+        .metric-item span { font-size: 0.9rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* ABOUT */
+        .about { padding: 100px 0; background: var(--bg-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; }
+        .skill-tags span {
+            display: inline-block;
+            background: var(--bg-offset);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin: 0 10px 10px 0;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* EXPERIENCE */
+        .experience { padding: 100px 0; background: var(--bg-offset); }
+        .job-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;}
+        .job-title h3 { font-size: 1.5rem; margin-bottom: 5px; }
+        .job-company { color: var(--accent); font-weight: 700; }
+        .job-date { color: var(--text-gray); font-family: monospace; }
+        .job-card ul { padding-left: 20px; margin-top: 20px; }
+        .job-card li { margin-bottom: 10px; color: #475569; }
+
+        /* FOUNDER STORY (Higher Hangers) */
+        .founder-story {
+            padding: 100px 0;
+            background: var(--primary);
+            color: white;
+        }
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .story-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .story-text p { color: var(--text-gray); margin-bottom: 20px; }
+
+        /* FOOTER */
+        footer { background: #020617; color: white; padding: 60px 0; text-align: center; }
+        footer a { color: white; margin: 0 15px; text-decoration: none; opacity: 0.7; }
+        footer a:hover { opacity: 1; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-content, .about-grid, .story-content, .metrics-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.5rem; }
+            nav ul { display: none; } 
+            .btn-outline { margin-left: 0; margin-top: 10px; display: block; text-align: center;}
+            .metric-item { margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">DREW CLEAVER</a>
+            <ul>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#founder">Founder Story</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Revenue Leader &<br>SaaS Founder.</h1>
+                <p class="subtitle">Lifelong racing driver turned Quota-Crushing Sales Leader. Specializing in complex technical sales, territory expansion, and turning "dorm room ideas" into global brands.</p>
+                <div class="cta-group">
+                    <a href="mailto:your-email@example.com" class="btn">Book an Interview</a>
+                    <a href="path-to-your-pdf-resume.pdf" class="btn btn-outline" download>Download Resume</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>8+ Years</h3>
+                        <p>Enterprise Sales</p>
+                    </div>
+                    <div class="stat">
+                        <h3>MEDDPICC</h3>
+                        <p>Methodology Expert</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x600/3b82f6/ffffff?text=Drew+Cleaver+Headshot" alt="Drew Cleaver">
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics-bar">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <strong>$200M+</strong>
+                    <span>Accounts Managed</span>
+                </div>
+                <div class="metric-item">
+                    <strong>$100M+</strong>
+                    <span>Contracts Closed</span>
+                </div>
+                <div class="metric-item">
+                    <strong>Top 1%</strong>
+                    <span>Kickstarter Campaign</span>
+                </div>
+                <div class="metric-item">
+                    <strong>30k+</strong>
+                    <span>Customers Acquired</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Sales Leadership Experience</h2>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Co-Founder & Head of Sales</h3>
+                        <span class="job-company">HigherHangers.com</span>
+                    </div>
+                    <span class="job-date">2015 - Present</span>
+                </div>
+                <ul>
+                    <li><strong>Full P&L Ownership:</strong> Built a 7-figure D2C brand from a dorm-room idea to 30,000+ customers in 40+ countries.</li>
+                    <li><strong>SaaS Buyer Experience:</strong> Evaluated hundreds of SaaS pitches (ERP, CX, Marketing), developing a deep intuition for effective demos from the <em>buyer's</em> perspective.</li>
+                    <li><strong>Global Operations:</strong> Led a fully remote network of 10+ expert consultants and vendors to deliver world-class service.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Account Executive (Mid-Market)</h3>
+                        <span class="job-company">Weatherford International</span>
+                    </div>
+                    <span class="job-date">2012 - 2015</span>
+                </div>
+                <ul>
+                    <li><strong>Hunter Mentality:</strong> Opened a new Rocky Mountain territory, growing net profit from &lt;$1M to &gt;$10M in a single year.</li>
+                    <li><strong>Strategic Wins:</strong> Closed $75M+ in long-term contracts by building multi-threaded relationships with C-suite and engineers.</li>
+                    <li><strong>Top Performer:</strong> Won global Salesforce utilization competition for exemplary deal tracking and pipeline hygiene.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Account Manager (Enterprise)</h3>
+                        <span class="job-company">Baker Hughes Company</span>
+                    </div>
+                    <span class="job-date">2011 - 2012</span>
+                </div>
+                <ul>
+                    <li><strong>Portfolio Management:</strong> Managed a portfolio of $200M+ annual revenue across 20+ enterprise accounts.</li>
+                    <li><strong>Turnaround Success:</strong> Built the most profitable cementing customer in Texas from $0 through strategic R&D.</li>
+                    <li><strong>Process Optimization:</strong> Developed asset reporting tools for $1B+ capital equipment, reducing report time by 80%.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="founder" class="founder-story">
+        <div class="container story-content">
+            <div class="story-image">
+                <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=Higher+Hangers+Product+Shot" alt="Higher Hangers Product" style="width:100%; border-radius:8px;">
+            </div>
+            <div class="story-text">
+                <h2>The Founder's Edge</h2>
+                <p>Sales isn't just about closing; it's about building. As the founder of <strong>Higher Hangers</strong>, I didn't just sell a product—I built a supply chain, designed a go-to-market strategy, and executed a Top 1% All-Time Kickstarter campaign.</p>
+                <p>I bring this same "Founder's Mentality" to enterprise sales: total ownership of the territory, creative problem solving, and a relentless drive to exceed revenue targets.</p>
+                
+                <div style="margin-top: 30px;">
+                    <span style="display:block; font-weight:700; color:var(--accent); margin-bottom:10px;">FEATURED IN:</span>
+                    <p style="color:white; opacity:0.8; font-size:0.9rem;">The Washington Post • Wall Street Journal • NBC • Designboom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="about">
+        <div class="container">
+            <h2 class="section-title">Technical & Sales Proficiency</h2>
+            <div class="about-grid">
+                <div>
+                    <h3>Methodologies</h3>
+                    <p style="margin-bottom:20px; color:#64748b;">Deeply experienced in modern enterprise sales frameworks.</p>
+                    <div class="skill-tags">
+                        <span>MEDDPICC</span>
+                        <span>Challenger Sale</span>
+                        <span>Solution Selling</span>
+                        <span>Value-Based Selling</span>
+                        <span>ROI Modeling</span>
+                    </div>
+                </div>
+                <div>
+                    <h3>Core Competencies</h3>
+                    <p style="margin-bottom:20px; color:#64748b;">What I bring to the revenue team on Day 1.</p>
+                    <div class="skill-tags">
+                        <span>Net New Logo Acquisition</span>
+                        <span>C-Suite Negotiation</span>
+                        <span>Territory Planning</span>
+                        <span>Pipeline Hygiene</span>
+                        <span>Salesforce CRM</span>
+                        <span>Cross-Functional Leadership</span>
+                        <span>Forecasting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Drew Cleaver</h3>
+            <p style="color: #94a3b8; margin: 10px 0 30px;">Austin, Texas • Open to Global Relocation</p>
+            <div>
+                <a href="https://linkedin.com/in/drewcleaver">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://calendly.com/drewcleaver">Book Time</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
