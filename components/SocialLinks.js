@@ -13,7 +13,7 @@ export default function SocialLinks({ className = '' }) {
         <FaLinkedin />
       </a>
       <a
-        href="https://www.instagram.com/drewcleaverdotcom"
+        href="https://www.instagram.com/drew.cleaver"
         aria-label="Instagram"
         target="_blank"
         rel="noopener noreferrer"
